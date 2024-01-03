@@ -1,8 +1,12 @@
 from pypdf import PdfReader
 import pyttsx3
+import sys
+
+#stores the name of pdf file to be read from command line
+filename = sys.argv[1]
 
 #create PdfReader object
-reader = PdfReader("meta-pdf.pdf")
+reader = PdfReader(filename)
 
 #create a pyttsx3 object
 engine = pyttsx3.init()
